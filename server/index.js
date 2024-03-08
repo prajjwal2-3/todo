@@ -37,3 +37,4 @@ app.delete('/api/todos/:id',(req,res)=>{
 app.listen(port,()=>{
     console.log('server is running')
 })
+module.exports=app;
