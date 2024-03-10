@@ -26,7 +26,7 @@ function App() {
     let isMounted = true;
 
     axios
-      .get("https://todo-five-black-91.vercel.app/api/todos")
+      .get("https://todo-server-two-phi.vercel.app/api/todos")
       .then((response) => {
         if (isMounted) {
           setdata(response.data);
@@ -41,7 +41,7 @@ function App() {
 
   const addtodo = (newtodo) => {
     axios
-      .post("https://todo-five-black-91.vercel.app/api/todos", { text: newtodo, done: false })
+      .post("https://todo-server-two-phi.vercel.app/api/todos", { text: newtodo, done: false })
       .then((Response) => {
         setdata(Response.data);
       })
@@ -50,7 +50,7 @@ function App() {
   };
   const deletetodo = (id) => {
     axios
-      .delete(`https://todo-five-black-91.vercel.app/api/todos/${id}`)
+      .delete(`https://todo-server-two-phi.vercel.app/api/todos/${id}`)
       .then((Response) => {
         setdata(Response.data);
       })
@@ -62,7 +62,7 @@ function App() {
 
   const updatetodo = (id, update) => {
     axios
-      .put(`https://todo-five-black-91.vercel.app/api/todos/${id}`, { id: id, text: update })
+      .put(`https://todo-server-two-phi.vercel.app/api/todos/${id}`, { id: id, text: update })
       .then((response) => {
         {
           console.log(response.data);
